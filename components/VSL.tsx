@@ -22,13 +22,13 @@ const VSL: React.FC<VSLProps> = ({ isVisible = true }) => {
       <div className="max-w-4xl mx-auto">
         {/* VTurbo SmartPlayer Container */}
         <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-black aspect-video border-4 border-white">
-          <div 
-            dangerouslySetInnerHTML={{ 
-              __html: `<vturb-smartplayer id="vid-6960206e93850164e9fb2b64" style="display: block; margin: 0 auto; width: 100%; aspect-ratio: 16/9;"></vturb-smartplayer>` 
-            }} 
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<vturb-smartplayer id="vid-6960206e93850164e9fb2b64" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>`
+            }}
           />
         </div>
-        
+
         <div className="mt-6 flex flex-col items-center justify-center space-y-4 text-center">
           <p className="flex items-center text-[#2D5A27] font-semibold text-base">
             <span className="mr-2 text-xl">🔊</span> Ative o som — essa informação pode mudar a sua vida
@@ -41,17 +41,17 @@ const VSL: React.FC<VSLProps> = ({ isVisible = true }) => {
                 <span className="text-[#B91C1C] font-black text-4xl">99 MT</span>
                 <span className="text-gray-400 line-through text-sm italic">500 MT</span>
               </div>
-              
+
               <button className="w-full py-5 px-8 bg-[#2D5A27] text-white font-black text-xl rounded-2xl shadow-[0_10px_20px_rgba(45,90,39,0.3)] hover:bg-[#1b3a18] active:scale-95 transition-all uppercase tracking-wider mb-4 animate-bounce">
                 Quero Acessar o Ebook Agora
               </button>
 
               <div className="flex items-center space-x-4 opacity-80">
                 <div className="flex items-center space-x-2">
-                   <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-[8px] text-white font-bold">M-Pesa</div>
-                   <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-[8px] text-white font-bold italic">e-Mola</div>
+                  <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center text-[8px] text-white font-bold">M-Pesa</div>
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-[8px] text-white font-bold italic">e-Mola</div>
                 </div>
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none text-left">Pagamento via M-Pesa<br/>e e-Mola disponível</span>
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none text-left">Pagamento via M-Pesa<br />e e-Mola disponível</span>
               </div>
             </div>
           </div>
