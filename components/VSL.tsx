@@ -21,7 +21,7 @@ const VSL: React.FC<VSLProps> = ({ isVisible = true }) => {
     <section className="pt-6 md:pt-10 pb-12 px-4 md:px-6 bg-[#FAF9F6]">
       <div className="max-w-4xl mx-auto">
         {/* VTurbo SmartPlayer Container */}
-        <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-black aspect-video border-4 border-white">
+        <div className="relative rounded-2xl shadow-2xl bg-black border-4 border-white">
           <div
             dangerouslySetInnerHTML={{
               __html: `<vturb-smartplayer id="vid-6960206e93850164e9fb2b64" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>`
