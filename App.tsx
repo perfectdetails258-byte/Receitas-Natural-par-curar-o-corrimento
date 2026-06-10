@@ -5,7 +5,6 @@ import Headline from './components/Headline';
 import VSL from './components/VSL';
 import EmotionalSection from './components/EmotionalSection';
 import LogicalSection from './components/LogicalSection';
-import RationalSection from './components/RationalSection';
 import ReaffirmationSection from './components/ReaffirmationSection';
 import Footer from './components/Footer';
 import SocialProof from './components/SocialProof';
@@ -38,9 +37,6 @@ const App: React.FC = () => {
         
         {/* 6. Lógica */}
         <LogicalSection />
-        
-        {/* 7. Racional */}
-        <RationalSection />
         
         {/* 8. Face-reafirmação */}
         <ReaffirmationSection />
