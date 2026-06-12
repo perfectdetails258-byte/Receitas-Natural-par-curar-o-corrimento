@@ -52,15 +52,15 @@ const UrgencyBar: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-[#E11620] text-white py-4 px-4 flex flex-col items-center justify-center m-0 border-none">
-      <div className="uppercase font-bold text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] mb-1 text-center">
+    <div className="w-full bg-[#E11620] text-white py-1 px-3 flex flex-row items-center justify-center gap-2 m-0 border-none">
+      <span className="uppercase font-bold text-[10px] sm:text-xs tracking-[0.08em] whitespace-nowrap">
         Atenção: Esta oferta única expira em
-      </div>
-      <div className="text-4xl md:text-5xl font-black tracking-tight text-center leading-none flex items-center justify-center space-x-1">
+      </span>
+      <span className="text-sm sm:text-base font-black tracking-tight leading-none flex items-center space-x-0.5">
         <span>{formatMins(timeLeft)}</span>
-        <span className="opacity-80 pb-1 font-medium">:</span>
+        <span className="opacity-80 font-medium">:</span>
         <span>{formatSecs(timeLeft)}</span>
-      </div>
+      </span>
     </div>
   );
 };
