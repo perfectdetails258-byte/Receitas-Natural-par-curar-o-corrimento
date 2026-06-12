@@ -422,11 +422,7 @@ const CommentsSection: React.FC = () => {
           </span>
         </div>
 
-        <hr style={{ border: 'none', borderTop: '1px solid #e4e6ea', margin: '0 0 8px 0' }} />
-
-        <p style={{ fontSize: '11px', color: '#90949c', margin: '0 0 16px 0', fontStyle: 'italic' }}>
-          Relatos ilustrativos. Os resultados podem variar.
-        </p>
+        <hr style={{ border: 'none', borderTop: '1px solid #e4e6ea', margin: '0 0 16px 0' }} />
 
         {/* Comments */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
