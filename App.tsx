@@ -30,7 +30,7 @@ const App: React.FC = () => {
       
       <main className="flex-grow">
         {/* 4. VSL */}
-        <VSL isVisible={showCTA} />
+        <VSL />
         
         {/* 5. Emoção */}
         <EmotionalSection />
