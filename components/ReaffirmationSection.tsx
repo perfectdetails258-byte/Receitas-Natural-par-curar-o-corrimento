@@ -22,15 +22,7 @@ const ReaffirmationSection: React.FC = () => {
           </p>
         </div>
         
-        <div className="mt-16">
-          <p className="text-[#2D5A27] font-bold text-xl mb-6">A decisão está em suas mãos.</p>
-          <a 
-            href="#cta"
-            className="inline-block text-[#2D5A27] underline font-bold text-lg hover:text-green-800 transition-colors"
-          >
-            👉 Clique aqui para garantir seu ebook agora mesmo.
-          </a>
-        </div>
+
       </div>
     </section>
   );
