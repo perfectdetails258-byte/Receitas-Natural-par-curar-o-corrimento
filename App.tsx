@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import UrgencyBar from './components/UrgencyBar';
 import Headline from './components/Headline';
 import VSL from './components/VSL';
+import CommentsSection from './components/CommentsSection';
 import EmotionalSection from './components/EmotionalSection';
 import LogicalSection from './components/LogicalSection';
 import ReaffirmationSection from './components/ReaffirmationSection';
@@ -31,6 +32,9 @@ const App: React.FC = () => {
       <main className="flex-grow">
         {/* 4. VSL */}
         <VSL />
+
+        {/* Comentários após VSL */}
+        <CommentsSection />
         
         {/* 5. Emoção */}
         <EmotionalSection />
