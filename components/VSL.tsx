@@ -43,4 +43,4 @@ const VSL: React.FC = () => {
   );
 };
 
-export default VSL;
+export default React.memo(VSL);

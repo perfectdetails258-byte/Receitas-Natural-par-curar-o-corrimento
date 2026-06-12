@@ -11,15 +11,7 @@ import Footer from './components/Footer';
 import SocialProof from './components/SocialProof';
 
 const App: React.FC = () => {
-  const [showCTA, setShowCTA] = useState(false);
 
-  // VSL strategy: Revelar botões após um tempo determinado (ex: 5 segundos para demo)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowCTA(true);
-    }, 5000); 
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="flex flex-col min-h-screen relative">
