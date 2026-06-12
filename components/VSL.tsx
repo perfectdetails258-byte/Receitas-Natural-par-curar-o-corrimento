@@ -21,31 +21,17 @@ const VSL: React.FC<VSLProps> = ({ isVisible = true }) => {
     <section className="pt-6 md:pt-10 pb-12 px-4 md:px-6 bg-[#FAF9F6]">
       <div className="max-w-4xl mx-auto">
         {/* SmartPlayer VSL Container */}
-        <div id="ifr_6a2b3a32e2fcee65f7f19ef5_wrapper" style={{ margin: '0 auto', width: '100%' }}>
-          <div
-            id="ifr_6a2b3a32e2fcee65f7f19ef5_aspect"
-            style={{ position: 'relative', paddingTop: '56.25%' }}
-          >
-            <iframe
-              frameBorder={0}
-              allowFullScreen
-              id="ifr_6a2b3a32e2fcee65f7f19ef5"
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              referrerPolicy="origin"
-              src="about:blank"
-              onLoad={(e) => {
-                const iframe = e.currentTarget;
-                iframe.onload = null;
-                const search = window.location.search || '?';
-                iframe.src =
-                  'https://scripts.converteai.net/f1e055dd-5317-4742-95ea-187e03fffcf2/players/6a2b3a32e2fcee65f7f19ef5/v4/embed.html' +
-                  search +
-                  '&vl=' +
-                  encodeURIComponent(window.location.href);
-              }}
-            />
-          </div>
-        </div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<div id="ifr_6a2b3a32e2fcee65f7f19ef5_wrapper" style="margin: 0 auto; width: 100%;">
+  <div id="ifr_6a2b3a32e2fcee65f7f19ef5_aspect" style="position: relative; padding: 56.25% 0 0 0;">
+    <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_6a2b3a32e2fcee65f7f19ef5" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload="this.onload=null, this.src='https://scripts.converteai.net/f1e055dd-5317-4742-95ea-187e03fffcf2/players/6a2b3a32e2fcee65f7f19ef5/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe>
+  </div>
+</div>
+            `
+          }}
+        />
 
         <div className="mt-6 flex flex-col items-center justify-center space-y-4 text-center">
           <p className="flex items-center text-[#2D5A27] font-semibold text-base">
