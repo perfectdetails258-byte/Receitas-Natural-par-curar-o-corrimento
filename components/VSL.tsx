@@ -7,11 +7,11 @@ interface VSLProps {
 
 const VSL: React.FC<VSLProps> = ({ isVisible = true }) => {
   useEffect(() => {
-    const scriptId = 'vturbo-player-script';
+    const scriptId = 'smartplayer-sdk-v4';
     if (!document.getElementById(scriptId)) {
       const s = document.createElement("script");
       s.id = scriptId;
-      s.src = "https://scripts.converteai.net/fdd6a96c-0e00-4d1e-a9b2-cba721e6fb9a/players/6960206e93850164e9fb2b64/v4/player.js";
+      s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
       s.async = true;
       document.head.appendChild(s);
     }
@@ -20,13 +20,31 @@ const VSL: React.FC<VSLProps> = ({ isVisible = true }) => {
   return (
     <section className="pt-6 md:pt-10 pb-12 px-4 md:px-6 bg-[#FAF9F6]">
       <div className="max-w-4xl mx-auto">
-        {/* VTurbo SmartPlayer Container */}
-        <div className="relative rounded-2xl shadow-2xl bg-black border-4 border-white">
+        {/* SmartPlayer VSL Container */}
+        <div id="ifr_6a2b3a32e2fcee65f7f19ef5_wrapper" style={{ margin: '0 auto', width: '100%' }}>
           <div
-            dangerouslySetInnerHTML={{
-              __html: `<vturb-smartplayer id="vid-6960206e93850164e9fb2b64" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>`
-            }}
-          />
+            id="ifr_6a2b3a32e2fcee65f7f19ef5_aspect"
+            style={{ position: 'relative', paddingTop: '56.25%' }}
+          >
+            <iframe
+              frameBorder={0}
+              allowFullScreen
+              id="ifr_6a2b3a32e2fcee65f7f19ef5"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              referrerPolicy="origin"
+              src="about:blank"
+              onLoad={(e) => {
+                const iframe = e.currentTarget;
+                iframe.onload = null;
+                const search = window.location.search || '?';
+                iframe.src =
+                  'https://scripts.converteai.net/f1e055dd-5317-4742-95ea-187e03fffcf2/players/6a2b3a32e2fcee65f7f19ef5/v4/embed.html' +
+                  search +
+                  '&vl=' +
+                  encodeURIComponent(window.location.href);
+              }}
+            />
+          </div>
         </div>
 
         <div className="mt-6 flex flex-col items-center justify-center space-y-4 text-center">
