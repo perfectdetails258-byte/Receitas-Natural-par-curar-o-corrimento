@@ -6,7 +6,7 @@ const VSL: React.FC = () => {
     if (!document.getElementById(scriptId)) {
       const s = document.createElement("script");
       s.id = scriptId;
-      s.src = "https://scripts.converteai.net/f1e055dd-5317-4742-95ea-187e03fffcf2/players/6a2b3a32e2fcee65f7f19ef5/v4/player.js";
+      s.src = "https://scripts.converteai.net/71e24d15-d92d-4f17-92d5-5bb026f1657d/players/6a4ab9be9fb73f80a475dd95/v4/player.js";
       s.async = true;
       document.head.appendChild(s);
     }
@@ -31,10 +31,9 @@ const VSL: React.FC = () => {
         <div
           dangerouslySetInnerHTML={{
             __html: `
-<vturb-smartplayer
-  id="vid-6a2b3a32e2fcee65f7f19ef5"
-  style="display: block; margin: 0 auto; width: 100%;"
-></vturb-smartplayer>
+<vturb-smartplayer id="vid-6a4ab9be9fb73f80a475dd95" style="display: block; margin: 0 auto; width: 100%;">
+  <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0; background-color: black;"></div>
+</vturb-smartplayer>
             `
           }}
         />
